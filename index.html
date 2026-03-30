@@ -1,133 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Plataforma Online - PetShop PUCRS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petshop PUCRS</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="bg-dark text-white py-3 shadow">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <h1 class="m-0">Petshop PUCRS</h1>
+      <p class="m-0" id="dataHoraAtual" aria-live="polite"></p>
+    </div>
+  </header>
 
-    <!-- Cabeçalho (Header) com informações e navegação -->
-    <header>
-        <section id="topo"></section>
-        <h1>PetShop Amigo Fiel</h1>
-        <p>Tudo o que o seu pet precisa em um só lugar!</p>
-        <nav>
-            <ul>
-                <p></p><li><a href="#acessorios">Acessórios</a></li>
-                <p></p><li><a href="#racoes">Rações Não Perecíveis</a></li>
-                <p></p><li><a href="#higiene">Higiene e Limpeza</a></li>
-                <p></p><li><a href="#servicos">Serviços do PetShop</a></li>
-                <p></p><li><a href="ajuda.html">Página de Ajuda</a></li>
-            </ul>
-        </nav>
-    </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Petshop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <hr>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#agendamento">Agendamento</a></li>
+          <li class="nav-item"><a class="nav-link" href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Corpo das páginas (Body) -->
-    <main>
-        <h2>Nossos Produtos</h2>
+  <main>
+    <section class="container mt-4">
+      <div id="carouselPetshop" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselPetshop" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselPetshop" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselPetshop" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
 
-        <!-- Categoria 1: Acessórios -->
-        <section id="acessorios">
-            <h3>1. Acessórios (Roupas, Brinquedos, Camas)</h3>
-            
-            <div>
-                <img src="imagens/caminha.jpg" alt="Foto de uma caminha macia para pets" width="200">
-                <p><strong>Produto:</strong> Caminha Nuvem Super Macia</p>
-                <p><strong>Descrição:</strong> Caminha redonda, confortável e lavável para cães e gatos de pequeno porte.</p>
-                <p><strong>Valor:</strong> R$ 120,00</p>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagens/banner1.jpg" class="d-block w-100 imagem-carrossel" alt="Cachorro tomando banho em um petshop">
+            <div class="carousel-caption d-none d-md-block fundo-legenda">
+              <h2>Banho com carinho</h2>
+              <p>Seu pet limpo, cheiroso e feliz.</p>
             </div>
-            
-            <br>
+          </div>
 
-            <div>
-                <img src="imagens/mordedor.jpg" alt="Foto de um brinquedo mordedor" width="200">
-                <p><strong>Produto:</strong> Brinquedo Mordedor de Osso</p>
-                <p><strong>Descrição:</strong> Brinquedo de borracha resistente para cães, ajuda na limpeza dos dentes.</p>
-                <p><strong>Valor:</strong> R$ 35,00</p>
+          <div class="carousel-item">
+            <img src="imagens/banner2.jpg" class="d-block w-100 imagem-carrossel" alt="Profissional realizando tosa em um cachorro">
+            <div class="carousel-caption d-none d-md-block fundo-legenda">
+              <h2>Tosa profissional</h2>
+              <p>Cuidado e estilo para o seu melhor amigo.</p>
             </div>
-        </section>
+          </div>
 
-        <hr>
-
-        <!-- Categoria 2: Rações Não Perecíveis -->
-        <section id="racoes">
-            <h3>2. Rações Não Perecíveis</h3>
-            
-            <div>
-                <img src="imagens/racao-cao.jpg" alt="Foto de um pacote de ração para cães" width="200">
-                <p><strong>Produto:</strong> Ração Premium Cães Adultos Sabor Carne (15kg)</p>
-                <p><strong>Descrição:</strong> Ração seca não perecível, rica em vitaminas e minerais para cães adultos.</p>
-                <p><strong>Valor:</strong> R$ 180,00</p>
+          <div class="carousel-item">
+            <img src="imagens/banner3.jpg" class="d-block w-100 imagem-carrossel" alt="Pet sendo transportado com segurança para atendimento">
+            <div class="carousel-caption d-none d-md-block fundo-legenda">
+              <h2>Tele-busca e entrega</h2>
+              <p>Praticidade para você e conforto para o pet.</p>
             </div>
+          </div>
+        </div>
 
-            <br>
-            
-            <div>
-                <img src="imagens/racao-gato.jpg" alt="Foto de um pacote de ração para gatos" width="200">
-                <p><strong>Produto:</strong> Ração Super Premium Gatos Castrados (3kg)</p>
-                <p><strong>Descrição:</strong> Ração seca não perecível específica para controle de peso de gatos castrados.</p>
-                <p><strong>Valor:</strong> R$ 85,00</p>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPetshop" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPetshop" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="sobre" class="container mt-5">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <h2>Sobre o Petshop</h2>
+          <p>
+            O Petshop PUCRS oferece serviços de banho e tosa com qualidade,
+            carinho e segurança. Nosso objetivo é cuidar do seu pet com atenção
+            especial e oferecer um sistema de agendamento simples e prático.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="h5">Diferenciais</h3>
+              <ul>
+                <li>Atendimento com horário agendado</li>
+                <li>Opção de tele-busca</li>
+                <li>Equipe especializada</li>
+                <li>Ambiente acolhedor</li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <hr>
-
-        <!-- Categoria 3: Produtos de Higiene e Limpeza -->
-        <section id="higiene">
-            <h3>3. Produtos de Higiene e Limpeza</h3>
-            
-            <div>
-                <img src="imagens/tapete.jpg" alt="Foto de pacote de tapetes higiênicos" width="200">
-                <p><strong>Produto:</strong> Tapete Higiênico Super Absorvente (30 unidades)</p>
-                <p><strong>Descrição:</strong> Tapetes com fita adesiva e atrativo canino para treinamento de filhotes e adultos.</p>
-                <p><strong>Valor:</strong> R$ 60,00</p>
+    <section id="servicos" class="container mt-5">
+      <h2 class="mb-4">Nossos serviços</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">Banho</h3>
+              <p class="card-text">
+                Serviço completo de higiene com produtos adequados ao perfil do pet.
+              </p>
             </div>
+          </div>
+        </div>
 
-            <br>
-            
-            <div>
-                <img src="imagens/shampoo.png" alt="Foto de shampoo para pets" width="200">
-                <p><strong>Produto:</strong> Shampoo Neutro Pelo Brilhante (500ml)</p>
-                <p><strong>Descrição:</strong> Shampoo suave para banho em casa, não agride os olhos do seu pet.</p>
-                <p><strong>Valor:</strong> R$ 25,00</p>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">Tosa</h3>
+              <p class="card-text">
+                Tosa higiênica e estética realizada com segurança e cuidado.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <hr>
+    <section id="agendamento" class="container mt-5 mb-5">
+      <div class="card shadow formulario-card">
+        <div class="card-body">
+          <h2 class="mb-4">Cadastro e agendamento</h2>
 
-        <!-- Serviços Oferecidos -->
-        <section id="servicos">
-            <h2>Nossos Serviços</h2>
-            
-            <div>
-                <h3>Banho e Tosa</h3>
-                <p><strong>Descrição:</strong> Serviço completo com banho morno, shampoo premium, corte de unhas, limpeza de ouvidos e tosa (padrão da raça ou higiênica).</p>
-                
-                <ul>
-                    <li><strong>Valor (SEM Tele-busca - você traz o pet):</strong> R$ 70,00</li>
-                    <li><strong>Valor (COM Tele-busca - nós buscamos em casa):</strong> R$ 90,00</li>
-                </ul>
+          <form id="formAgendamento" novalidate>
+            <div class="row g-3">
+              <div class="col-12">
+                <h3 class="h5">Dados do cliente</h3>
+              </div>
+
+              <div class="col-md-6">
+                <label for="nomeCliente" class="form-label">Nome completo</label>
+                <input type="text" class="form-control" id="nomeCliente" placeholder="Digite seu nome completo" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+              </div>
+
+              <div class="col-md-8">
+                <label for="endereco" class="form-label">Endereço</label>
+                <input type="text" class="form-control" id="endereco" placeholder="Rua, número e bairro" required>
+              </div>
+
+              <div class="col-md-4">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="telefone" placeholder="(11) 99999-9999" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label d-block">Sexo</label>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sexo" id="sexoMasculino" value="Masculino" required>
+                  <label class="form-check-label" for="sexoMasculino">Masculino</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sexo" id="sexoFeminino" value="Feminino">
+                  <label class="form-check-label" for="sexoFeminino">Feminino</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sexo" id="sexoOutro" value="Outro">
+                  <label class="form-check-label" for="sexoOutro">Outro</label>
+                </div>
+              </div>
+
+              <div class="col-12 mt-4">
+                <h3 class="h5">Dados do pet</h3>
+              </div>
+
+              <div class="col-md-4">
+                <label for="nomePet" class="form-label">Nome do pet</label>
+                <input type="text" class="form-control" id="nomePet" placeholder="Nome do pet" required>
+              </div>
+
+              <div class="col-md-4">
+                <label for="raca" class="form-label">Raça</label>
+                <input type="text" class="form-control" id="raca" placeholder="Raça do pet" required>
+              </div>
+
+              <div class="col-md-4">
+                <label for="idade" class="form-label">Idade</label>
+                <input type="number" class="form-control" id="idade" min="0" max="30" placeholder="Idade em anos" required>
+              </div>
+
+              <div class="col-12 mt-4">
+                <h3 class="h5">Serviço e atendimento</h3>
+              </div>
+
+              <div class="col-md-6">
+                <label for="servico" class="form-label">Serviço desejado</label>
+                <select id="servico" class="form-select" required>
+                  <option value="">Selecione</option>
+                  <option value="Banho">Banho</option>
+                  <option value="Tosa">Tosa</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="atendimento" class="form-label">Método de atendimento</label>
+                <select id="atendimento" class="form-select" required>
+                  <option value="">Selecione</option>
+                  <option value="Tele-busca">Tele-busca</option>
+                  <option value="Entrega no local">Entrega no local</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="dataAgendamento" class="form-label">Data do agendamento</label>
+                <input type="date" class="form-control" id="dataAgendamento" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="horaAgendamento" class="form-label">Horário do agendamento</label>
+                <input type="time" class="form-control" id="horaAgendamento" required>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label d-block">Informações adicionais</label>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="petEspecial">
+                  <label class="form-check-label" for="petEspecial">
+                    Meu pet precisa de atenção especial
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="aceite" required>
+                  <label class="form-check-label" for="aceite">
+                    Confirmo que as informações estão corretas
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12 d-flex gap-2 flex-wrap mt-3">
+                <button type="submit" class="btn btn-primary">Agendar serviço</button>
+                <button type="reset" class="btn btn-outline-secondary">Limpar campos</button>
+              </div>
             </div>
-        </section>
-    </main>
+          </form>
 
-    <hr>
+          <div id="mensagemResultado" class="alert alert-success mt-4 d-none" role="alert" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- Rodapé (Footer) -->
-    <footer>
-        <h2>Informações Legais e Contato</h2>
-        <p><strong>Autoria:</strong> Jonathan Guedes Martins - Trabalho Individual PUCRS</p>
-        <p><strong>Contato:</strong> atendimento@petshopamigofiel.com.br | Telefone: (51) 99999-9999</p>
-        <p><strong>Endereço:</strong> Av. Ipiranga, 6681 - Partenon, Porto Alegre - RS (Fictício)</p>
-        <nav>
-            <p>
-                <a href="#topo">Voltar ao topo da página</a> | 
-                <a href="ajuda.html">Página de Ajuda</a>
-            </p>
-        </nav>
-    </footer>
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">Petshop PUCRS - Sistema Web desenvolvido para a disciplina de Fundamentos de Sistemas Web.</p>
+  </footer>
 
+  <script src="js/script.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
 </body>
 </html>

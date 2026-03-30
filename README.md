@@ -1,40 +1,39 @@
-# Plataforma Online - PetShop Amigo Fiel 🐾
+# Projeto Petshop PUCRS - Fase 2
 
-Este repositório contém os arquivos da **Fase 1** do Projeto da Disciplina de **Fundamentos de Sistemas Web** da **PUCRS**. 
+## Descrição
+Este projeto foi desenvolvido para a disciplina de Fundamentos de Sistemas Web.
+Na fase 2, o sistema web do petshop foi aprimorado com recursos visuais, interatividade em JavaScript, formulário completo de cadastro e agendamento de serviços.
 
-O projeto consiste na criação da camada de apresentação (front-end) de uma plataforma online para um PetShop, desenvolvida exclusivamente com a linguagem de marcação HTML5, conforme os requisitos e restrições propostos para esta etapa.
+## Funcionalidades
+- Layout com CSS3
+- Uso de Bootstrap
+- Carrossel de imagens
+- Cadastro de cliente
+- Cadastro de pet
+- Escolha de serviço: banho ou tosa
+- Método de atendimento: tele-busca ou entrega no local
+- Agendamento com data e horário
+- Validação básica com JavaScript
+- Exibição de mensagem de confirmação
+- Recurso de acessibilidade com atributo alt nas imagens
 
-## 🎯 Objetivo e Metas
+## Tecnologias utilizadas
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
+- GitHub
+- GitHub Pages
 
-**Objetivo Geral:**
-Desenvolver a camada de apresentação (front-end) de um sistema web para um petshop, utilizando exclusivamente a linguagem de marcação HTML5 para a estruturação das páginas. O projeto representa a interface do cliente dentro da arquitetura cliente-servidor, permitindo a visualização organizada do conteúdo e dos serviços oferecidos pelo estabelecimento.
+## Estrutura do projeto
+- `index.html`: página principal
+- `ajuda.html`: página de ajuda
+- `css/style.css`: estilos da página
+- `js/script.js`: interações e validações
+- `imagens/`: imagens do projeto
 
-**Metas Específicas:**
-* Aplicar as fases iniciais do ciclo de vida de um projeto web, focando no projeto de conteúdo e interface do usuário de forma estática.
-* Estruturar o documento web de forma semântica, utilizando as tags fundamentais do HTML5 (como `<header>`, `<footer>`, `<nav>`, `<main>` e `<section>`).
-* Exibir os produtos em três categorias distintas (Acessórios, Rações e Higiene) e detalhar os serviços disponíveis do estabelecimento.
-* Realizar a publicação do projeto na web através do servidor de compartilhamento GitHub Pages.
+## Publicação
+O projeto foi publicado com GitHub Pages.
 
-## 🛠️ Tecnologias Utilizadas
-
-* **HTML5:** Utilizado para toda a marcação e estruturação semântica do conteúdo.
-* *Nota: Conforme os requisitos da Fase 1 da disciplina, este projeto foi desenvolvido propositalmente sem o uso de folhas de estilo (CSS), frameworks (como Bootstrap) ou funções de interatividade (JavaScript).*
-
-## 📂 Estrutura do Projeto
-
-O sistema é composto pelos seguintes arquivos principais:
-
-* `index.html`: Página principal contendo o cabeçalho, menu de navegação, catálogo de produtos separados em 3 categorias (com imagens, descrição e valores), seção de serviços (Banho e tosa com/sem tele-busca) e rodapé com informações de contato.
-* `ajuda.html`: Uma página auxiliar contendo um arquivo de ajuda que descreve as funcionalidades e a navegação do site para o usuário final.
-* Imagens em formato `.jpg` utilizadas para ilustrar os produtos.
-
-## 🌐 Como Acessar o Projeto
-
-O projeto foi hospedado utilizando o GitHub Pages. Você pode visualizar o sistema web funcionando diretamente pelo link abaixo:
-
-👉 **(https://github.com/O-GUEDES/projeto-petshop-pucrs)**
-
-## 👨‍💻 Autoria
-
-Projeto desenvolvido individualmente por:
-**Jonathan Guedes Martins** - Aluno(a) da PUCRS.
+## Autor
+Jonathan Guedes
